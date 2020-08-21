@@ -1,0 +1,111 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src chrome: blob:; img-src https:; object-src 'none'"> -->
+    <link rel="localization" href="browser/branding/brandings.ftl">
+    <link rel="localization" href="branding/brand.ftl">
+    <!-- Temporary "en-US"-only l10n strings -->
+    <link rel="localization" href="preview/pioneer.ftl">
+    <link rel="stylesheet" href="/src/common.css">
+    <link rel="stylesheet" href="/src/pioneer.css">
+    <script src="/src/pioneer.js"></script>
+    <link rel="icon" href="chrome://browser/skin/pioneer.svg">
+    <title data-l10n-id="pioneer">Pioneer</title>
+  </head>
+
+  <body>
+    <div id="report-content">
+      <header>
+        <h1 id="title" data-l10n-id="pioneer-document-title">Put your data to work for a better internet</h1>
+        <button id="enrollment-button" class="primary" data-l10n-id="pioneer-enrollment-button">Join Pioneer</button>
+      </header>
+      <div id="summary" data-l10n-id="pioneer-summary">Pioneer puts your
+ data to work to address some of today’s most pressing technology
+concerns, like misinformation, data privacy, and ethical AI. The data
+you agree to share with Mozilla (the makers of Firefox) helps create
+tools for better internet transparency and design products that give
+control back to the people who use them. As a Pioneer participant,
+you’ll also have the option to contribute your data to studies sponsored
+ by research institutions and other organizations.</div>
+      <div id="details">
+        <h2 data-l10n-id="pioneer-works-title">How it works:</h2>
+        <p><strong data-l10n-id="pioneer-works-bullet-get-started-title">Get started.</strong> <span data-l10n-id="pioneer-works-bullet-get-started-content">Select
+ the Join Pioneer button, review and agree to our Privacy Notice, and
+answer a few (optional) demographic questions.  Note that Pioneer is
+currently open to participants in the US who are 19 or older.</span></p>
+        <p><strong data-l10n-id="pioneer-works-bullet-enroll-title">Enroll in studies.</strong> <span data-l10n-id="pioneer-works-bullet-enroll-content">Share
+ your data with studies run by Mozilla and our Pioneer research
+partners. You’ll have the opportunity to learn about a study’s goals,
+the data it collects, and its research team before you enroll.</span></p>
+        <p><strong data-l10n-id="pioneer-works-bullet-control-title">Stay in control.</strong> <span data-l10n-id="pioneer-works-bullet-control-content">The
+ Pioneer icon will appear on the Firefox toolbar. Select the icon any
+time you want to return to this page to update your settings, enroll in a
+ study, or leave a study or the Pioneer program.</span></p>
+      </div>
+      <div id="data">
+        <h2 data-l10n-id="pioneer-your-data-title">Your data: why it matters and how we protect it</h2>
+        <p data-l10n-id="pioneer-your-data-summary">Pioneer puts your
+data to work for a better internet. Our goal is to better understand
+topics like internet usage, online privacy, algorithmic bias,
+discrimination, and misinformation. This in turn can lead to new
+products that fundamentally change the tech landscape and hand more
+power and control back to users.</p>
+        <ul>
+          <li data-l10n-id="pioneer-your-data-bullet-know">You’ll know
+the information we plan to collect before we collect it. We publish our
+data collection documentation, so you can confirm this for yourself.
+Read each privacy notice for detailed information.</li>
+          <li data-l10n-id="pioneer-your-data-bullet-lengths">We prioritize securing your data and protecting your privacy.</li>
+          <li data-l10n-id="pioneer-your-data-bullet-leave">You can leave the Pioneer program at any time, and we’ll stop collecting data when you do.</li>
+        </ul>
+        <p data-l10n-id="pioneer-your-data-learn-more">Learn more about <a data-l10n-name="privacy-policy" id="privacy-policy" href="https://support.mozilla.org/1/firefox/81.0a1/Darwin/en-US/pioneer-managing-account-data" target="_blank">managing the data you share</a> with Pioneer.</p>
+      </div>
+      <h2 id="header-available-studies" data-l10n-id="pioneer-current-studies">Current Studies</h2>
+      <div id="available-studies"><div id="pioneer-v2-example@mozilla.org" class="card card-no-hover" style="opacity: 0.5;"><img class="card-icon" src="/src/2644632-32.png"><div class="card-body"><h3 class="card-name">Demo Study</h3><span class="card-author">Pioneer Developers</span></div><div class="card-actions"><button id="pioneer-v2-example@mozilla.org-join-button" class="primary join-button" data-l10n-id="pioneer-study-prompt" disabled="disabled">Join to enroll</button></div><div class="card-description"><p>Study purpose: Testing Pioneer.</p><p><span>You can always find the </span><a href="https://addons.mozilla.org/en-US/firefox/addon/pioneer-v2-example/">privacy policy</a><span> at our website.</span></p></div><div class="card-data-collected"><p>This study will collect:</p><ul><li>The date and time</li></ul></div></div></div>
+      <dialog id="join-pioneer-consent-dialog" class="modal" is="trapped-dialog">
+        <h3 data-l10n-id="pioneer-consent-notice">Pioneer Privacy Consent Notice</h3>
+        <p data-l10n-id="pioneer-program-consent-intro">When you enroll
+in Pioneer, you are sharing personal information. Keeping that
+information safe is important to us and to the integrity of Pioneer.
+Here is how we safeguard your data and protect your identity.</p>
+        <ul id="join-pioneer-consent" class="consent-list"></ul>
+        <footer>
+          <button id="join-pioneer-accept-dialog-button" class="primary" data-l10n-id="pioneer-accept-participate">Accept and Participate</button>
+          <button id="join-pioneer-cancel-dialog-button" data-l10n-id="pioneer-cancel">Cancel</button>
+        </footer>
+      </dialog>
+      <dialog id="leave-pioneer-consent-dialog" class="modal" is="trapped-dialog">
+        <h3 data-l10n-id="pioneer-leave">Leaving Pioneer</h3>
+        <ul id="leave-pioneer-consent" class="consent-list"></ul>
+        <footer>
+          <button id="leave-pioneer-cancel-dialog-button" class="primary" data-l10n-id="pioneer-cancel">Cancel</button>
+          <button id="leave-pioneer-accept-dialog-button" data-l10n-id="pioneer-accept-leave">Accept and Leave</button>
+        </footer>
+      </dialog>
+      <dialog id="join-study-consent-dialog" class="modal" is="trapped-dialog">
+        <h3 data-l10n-id="pioneer-consent-study-notice">Pioneer Study Privacy Consent Notice</h3>
+        <p data-l10n-id="pioneer-program-study-intro">When you enroll in
+ this study, you are sharing personal information. Keeping that
+information safe is important to us and to the integrity of Pioneer.
+Here is how we safeguard your data and protect your identity.</p>
+        <ul id="join-study-consent" class="consent-list"></ul>
+        <footer>
+          <button id="join-study-accept-dialog-button" class="primary" data-l10n-id="pioneer-consent-study-join">Accept and Join Study</button>
+          <button id="join-study-cancel-dialog-button" data-l10n-id="pioneer-cancel">Cancel</button>
+        </footer>
+      </dialog>
+      <dialog id="leave-study-consent-dialog" class="modal" is="trapped-dialog">
+        <h3 data-l10n-id="pioneer-consent-study-title">Leaving Study</h3>
+        <ul id="leave-study-consent" class="consent-list"></ul>
+        <footer>
+          <button id="leave-study-cancel-dialog-button" class="primary" data-l10n-id="pioneer-cancel">Cancel</button>
+          <button id="leave-study-accept-dialog-button" data-l10n-id="pioneer-consent-study-leave">Accept and Leave Study</button>
+        </footer>
+      </dialog>
+
+
+</div></body></html>
